@@ -44,6 +44,7 @@ public class CardController {
 		return ResponseEntity.ok(found);
 	}
 
+	@GetMapping("/update/{id}")
 	public ResponseEntity<Card> update(@RequestBody Card newCard, @PathVariable Long id) {
 		Card updated = this.service.update(newCard, id);
 		return new ResponseEntity<>(updated, HttpStatus.ACCEPTED);

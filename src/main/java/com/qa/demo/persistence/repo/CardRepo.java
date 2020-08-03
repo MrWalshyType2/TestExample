@@ -10,6 +10,6 @@ import com.qa.demo.persistence.domain.Card;
 @Repository
 public interface CardRepo extends JpaRepository<Card, Long> {
 
-	List<Card> findlAllByName(String name);
+	List<Card> findAllByName(String name);
 
 }
